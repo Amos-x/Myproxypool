@@ -25,19 +25,19 @@ class ProxyTest(object):
                 real_proxy = 'http://' + proxy
                 async with session.get(TEST_WEB, proxy=real_proxy, timeout=TEST_TIMEOUT) as response:
                     if response.status == 200:
-                        self.conn.put(proxy=proxy)
+                        self.conn.put(proxy)
             except:
-                print('代理不可用',proxy)
+                pass
 
     def test(self):
         """异步检测启动函数"""
-        # try:
-        if self.test_proxies_list:
-            loop = asyncio.get_event_loop()
-            tasks = [self.test_single_proxy(proxy) for proxy in self.test_proxies_list]
-            loop.run_until_complete(asyncio.wait(tasks))
-        # except:
-        #     print('异步检测错误')
+        try:
+            if self.test_proxies_list:
+                loop = asyncio.get_event_loop()
+                tasks = [self.test_single_proxy(proxy) for proxy in self.test_proxies_list]
+                loop.run_until_complete(asyncio.wait(tasks))
+        except:
+            print('异步检测错误')
 
 class ProxyPoolAdder(object):
     """
@@ -68,7 +68,7 @@ class ProxyPoolAdder(object):
                 if self.isover_max():
                     break
             if proxies_count == 0:
-                print('添加代理出错，请检查')
+                print('爬取代理出错，请检查')
 
 class Schedule(object):
 

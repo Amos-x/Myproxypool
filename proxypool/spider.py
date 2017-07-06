@@ -69,7 +69,7 @@ class ProxyCrawl(object,metaclass=ProxyMetaclass):
     #
     def crawl_goubanjia(self):
         start_url = 'http://www.goubanjia.com/free/gngn/index{page}.shtml'
-        urls = [start_url.format(page=x) for x in range(1,20)]
+        urls = [start_url.format(page=x) for x in range(1,5)]
         for url in urls:
             print('crawling ',url)
             html = ProxyCrawl.get_page(url)
@@ -84,6 +84,7 @@ class ProxyCrawl(object,metaclass=ProxyMetaclass):
         start_url = 'http://www.xicidaili.com/wt/{page}'
         urls = [start_url.format(page=x) for x in range(1,6)]
         for url in urls:
+            print('crawling ', url)
             html = ProxyCrawl.get_page(url)
             if html:
                 soup = BeautifulSoup(html,'lxml')

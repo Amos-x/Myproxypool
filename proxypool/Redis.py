@@ -18,10 +18,9 @@ class RedisClient(object):
 
     def put(self,proxy):
         """放代理入redis"""
-        proxies = [proxy.decode('utf-8') for proxy in self.client.lrange('proxies', 0, -1)]
+        proxies = [x.decode('utf-8') for x in self.client.lrange('proxies', 0, -1)]
         if proxy not in proxies:
-            self.client.rpush('proxies',proxy)
-            print('代理可用，已放入pool',proxy)
+            self.client.rpush('proxies', proxy)
 
     def pop(self):
         """从右边取第一个代理"""
@@ -41,6 +40,4 @@ class RedisClient(object):
 
 if __name__ == '__main__':
     conn = RedisClient()
-    conn.put('180.120.120.120:8080')
-    a = conn.get(2)
-    print(a[0],type(a[0]))
+
