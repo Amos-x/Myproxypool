@@ -1,4 +1,5 @@
 import os
 
 def run():
-    os.system("python run_api.py")
+    pwd = os.getcwd()
+    os.system('python %s\\run.py' %pwd)

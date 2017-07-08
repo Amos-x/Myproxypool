@@ -10,7 +10,7 @@ def hello():
 @app.route('/get')
 def get():
     conn = RedisClient()
-    return conn.pop()
+    return conn.rpop()
 
 if __name__ == '__main__':
     app.run()
