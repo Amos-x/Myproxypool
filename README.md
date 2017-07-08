@@ -1,42 +1,42 @@
-Myproxypool 
+Myproxypool
 
-½öÓÃÓÚÑ§Ï°½»Á÷£¬By Amos
-Ê¹ÓÃredisÊý¾Ý¿âÎ¬»¤µÄÒ»¸öÃâ·Ñ´úÀí³Ø
-¿É×÷Îª°²×°¿âÊ¹ÓÃ£¬ÏÂÔØºó½«ÏîÄ¿¸´ÖÆµ½ÄãµÄpython¿âËÑË÷Â·¾¶ÏÂ Èç£º~\Python36\Lib\site-packages
-
-
-Ê¹ÓÃ·½·¨£º
-ps:Ê¹ÓÃÇ°£¬ÇëÏÈ¸ù¾Ý×Ô¼ºµÄµçÄÔ½øÐÐÉèÖÃ¡£
-import Myproxypool  #µ¼Èë¿â
-Myproxypool.run() #Æô¶¯²¢Î¬»¤´úÀí³Ø
+ä»…ç”¨äºŽå­¦ä¹ äº¤æµï¼ŒBy Amos
+ä½¿ç”¨redisæ•°æ®åº“ç»´æŠ¤çš„ä¸€ä¸ªå…è´¹ä»£ç†æ± 
+å¯ä½œä¸ºå®‰è£…åº“ä½¿ç”¨ï¼Œä¸‹è½½åŽå°†é¡¹ç›®å¤åˆ¶åˆ°ä½ çš„pythonåº“æœç´¢è·¯å¾„ä¸‹ å¦‚ï¼š~\Python36\Lib\site-packages
 
 
-ÉèÖÃ£¨ÔÚÊ¹ÓÃÖ®Ç°½øÐÐ£©£º
-Ä¿Ç°Ã»ÓÐÌá¹©Íâ²¿µ÷ÓÃµÄÉèÖÃ½Ó¿Ú¡£
-´ò¿ªÔ­ÎÄ¼þ£¬ÐÞ¸ÄÉèÖÃ¼´¿É£¬ÎÄ¼þµØÖ·£ºMyproxypool\proxypool\settings.py
-ÄÚÈÝÈçÏÂ£º
-ÊÇ·ñ¿ªÆôÍøÒ³api£¬Èô¿ªÆô£¬ÇëÇó±¾µØ5000¶Ë¿Ú£¬·µ»ØÒ»¸ö´úÀíIP¡£ÇëÇóµØÖ·Îª£ºlocalhost:5000/get
+ä½¿ç”¨æ–¹æ³•ï¼š
+ps:ä½¿ç”¨å‰ï¼Œè¯·å…ˆæ ¹æ®è‡ªå·±çš„ç”µè„‘è¿›è¡Œè®¾ç½®ã€‚
+import Myproxypool  #å¯¼å…¥åº“
+Myproxypool.run() #å¯åŠ¨å¹¶ç»´æŠ¤ä»£ç†æ± 
+
+
+è®¾ç½®ï¼ˆåœ¨ä½¿ç”¨ä¹‹å‰è¿›è¡Œï¼‰ï¼š
+ç›®å‰æ²¡æœ‰æä¾›å¤–éƒ¨è°ƒç”¨çš„è®¾ç½®æŽ¥å£ã€‚
+æ‰“å¼€åŽŸæ–‡ä»¶ï¼Œä¿®æ”¹è®¾ç½®å³å¯ï¼Œæ–‡ä»¶åœ°å€ï¼šMyproxypool\proxypool\settings.py
+å†…å®¹å¦‚ä¸‹ï¼š
+æ˜¯å¦å¼€å¯ç½‘é¡µapiï¼Œè‹¥å¼€å¯ï¼Œè¯·æ±‚æœ¬åœ°5000ç«¯å£ï¼Œè¿”å›žä¸€ä¸ªä»£ç†IPã€‚è¯·æ±‚åœ°å€ä¸ºï¼šlocalhost:5000/get
 WEBAPI_ENABLED = False
 
-redisÊý¾Ý¿âÁ¬½ÓÐÅÏ¢
-REDIS_HOST = 'localhost'  # redisÊý¾Ý¿âÁ¬½ÓµØÖ·
-REDIS_PORT = 6379   # redisÊý¾Ý¿â¶Ë¿Ú
-REDIS_PASSWORD = 'xxxxxxx'  # redisÊý¾Ý¿âÃÜÂë 
+redisæ•°æ®åº“è¿žæŽ¥ä¿¡æ¯
+REDIS_HOST = 'localhost'  # redisæ•°æ®åº“è¿žæŽ¥åœ°å€
+REDIS_PORT = 6379   # redisæ•°æ®åº“ç«¯å£
+REDIS_PASSWORD = 'xxxxxxx'  # redisæ•°æ®åº“å¯†ç 
 
-´úÀí²âÊÔÕ¾µã
-TEST_WEB = 'http://www.baidu.com/'  # ÓÃÓÚ²âÊÔ´úÀíÊÇ·ñ¿ÉÓÃµÄÕ¾µã£¬¿É¸ü¾ßÐèÇó×Ô¶¨Òå
-´úÀí²âÊÔÍøÒ³³¬Ê±Ê±¼äÉèÖÃ
+ä»£ç†æµ‹è¯•ç«™ç‚¹
+TEST_WEB = 'http://www.baidu.com/'  # ç”¨äºŽæµ‹è¯•ä»£ç†æ˜¯å¦å¯ç”¨çš„ç«™ç‚¹ï¼Œå¯æ›´å…·éœ€æ±‚è‡ªå®šä¹‰
+ä»£ç†æµ‹è¯•ç½‘é¡µè¶…æ—¶æ—¶é—´è®¾ç½®
 TEST_TIMEOUT = 10
-¼ì²éÖÜÆÚ µ¥Î»£ºÃë
+æ£€æŸ¥å‘¨æœŸ å•ä½ï¼šç§’
 TEST_PERIOD = 60
 
-´úÀí³ØÈÝÁ¿ÉÏÏÂÏÞÉèÖÃ
-PROXIES_MAX = 100  # ´úÀí³ØÈÝÁ¿ÉÏÏÞ
-PROXIES_MIN = 10  # ´úÀí³ØÈÝÁ¿ÏÂÏÞ
-´úÀí³Ø´óÐ¡¼ì²âÖÜÆÚ µ¥Î»£ºÃë
+ä»£ç†æ± å®¹é‡ä¸Šä¸‹é™è®¾ç½®
+PROXIES_MAX = 100  # ä»£ç†æ± å®¹é‡ä¸Šé™
+PROXIES_MIN = 10  # ä»£ç†æ± å®¹é‡ä¸‹é™
+ä»£ç†æ± å¤§å°æ£€æµ‹å‘¨æœŸ å•ä½ï¼šç§’
 PROXIES_LEN_CHECK_PERIOD = 30
 
-ÉèÖÃÄ¬ÈÏÇëÇóhanders
+è®¾ç½®é»˜è®¤è¯·æ±‚handers
 BASE_HEADERS = {
     'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
 }
