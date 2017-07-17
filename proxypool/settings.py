@@ -8,7 +8,7 @@ REDIS_PASSWORD = 'wyx379833553'
 
 
 # 代理测试站点
-TEST_WEB = 'http://www.baidu.com/'
+TEST_WEB = 'http://www.zhihu.com/'
 # 代理测试网页超时时间设置
 TEST_TIMEOUT = 10
 # 检查周期 单位：秒

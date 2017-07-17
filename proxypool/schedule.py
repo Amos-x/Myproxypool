@@ -62,8 +62,9 @@ class ProxyPoolAdder(object):
         while not self.isover_max():
             for spider in self.crawler.__crawlfunc__:
                 proxies_list = self.crawler.get_proxy_list(spider)
-                self.test.set_test_proxies(proxies_list)
-                self.test.test()
+                if proxies_list:
+                    self.test.set_test_proxies(proxies_list)
+                    self.test.test()
                 proxies_count += len(proxies_list)
                 if self.isover_max():
                     break
@@ -109,8 +110,7 @@ class Schedule(object):
         crawl_pro.start()
 
 if __name__ == '__main__':
-    r = Schedule()
-    r.run()
+    r = ProxyTest()
 
 
 
