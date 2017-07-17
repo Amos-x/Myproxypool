@@ -1,5 +1,4 @@
 import os
 
 def run():
-    pwd = os.getcwd()
-    os.system('python %s\\run.py' %pwd)
+    os.system('python H:\python36\Lib\site-packages\Myproxypool\\run.py')
