@@ -1,6 +1,7 @@
 import redis
 from proxypool.settings import REDIS_PORT,REDIS_HOST,REDIS_PASSWORD
 
+
 class RedisClient(object):
 
     def __init__(self):

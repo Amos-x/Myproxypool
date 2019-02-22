@@ -6,6 +6,7 @@ import asyncio
 import aiohttp
 import time
 
+
 class ProxyTest(object):
     """
     代理检测
@@ -39,6 +40,7 @@ class ProxyTest(object):
         except:
             print('异步检测错误')
 
+
 class ProxyPoolAdder(object):
     """
     向代理池中添加代理
@@ -70,6 +72,7 @@ class ProxyPoolAdder(object):
                     break
             if proxies_count == 0:
                 print('爬取代理出错，请检查')
+
 
 class Schedule(object):
 
@@ -108,6 +111,7 @@ class Schedule(object):
         crawl_pro = Process(target=Schedule.crawl)
         test_pro.start()
         crawl_pro.start()
+
 
 if __name__ == '__main__':
     r = ProxyTest()

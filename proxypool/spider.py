@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from pyquery import PyQuery as pq
 
+
 class ProxyMetaclass(type):
     """ 定义元类，在类中加入表示爬虫个数和爬虫函数的两个参数
         __crawlfunc__ 和 __crawlfunccount """
@@ -108,19 +109,20 @@ class ProxyCrawl(object,metaclass=ProxyMetaclass):
                     port = x.select('td[data-title="PORT"]')[0].get_text()
                     yield ':'.join([ip,port])
 
-    def crawl_nianshao(self):
-        start_url = 'http://www.nianshao.me/?stype=1&page={page}'
-        urls = [start_url.format(page=x) for x in range(1, 21)]
-        for url in urls:
-            print('crawling', url)
-            html = ProxyCrawl.get_page(url)
-            if html:
-                soup = BeautifulSoup(html, 'lxml')
-                ip_list = soup.select('tbody tr')
-                for group in ip_list:
-                    ip = group.select('td[style="WIDTH:110PX"]')[0].get_text()
-                    port = group.select('td[style="WIDTH:40PX"]')[0].get_text()
-                    yield ':'.join([ip, port])
+    # def crawl_nianshao(self):
+    #     start_url = 'http://www.nianshao.me/?stype=1&page={page}'
+    #     urls = [start_url.format(page=x) for x in range(1, 21)]
+    #     for url in urls:
+    #         print('crawling', url)
+    #         html = ProxyCrawl.get_page(url)
+    #         if html:
+    #             soup = BeautifulSoup(html, 'lxml')
+    #             ip_list = soup.select('tbody tr')
+    #             for group in ip_list:
+    #                 ip = group.select('td[style="WIDTH:110PX"]')[0].get_text()
+    #                 port = group.select('td[style="WIDTH:40PX"]')[0].get_text()
+    #                 yield ':'.join([ip, port])
+
 
 if __name__ == '__main__':
     spider = ProxyCrawl()
