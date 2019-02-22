@@ -115,12 +115,3 @@ class Schedule(object):
 
 if __name__ == '__main__':
     r = ProxyTest()
-
-
-
-
-
-
-
-
-
